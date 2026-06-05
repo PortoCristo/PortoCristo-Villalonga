@@ -9,13 +9,36 @@
 <body style="font-family: Arial; margin:0; padding:0;">
 
     <!-- HEADER -->
-       <div style="background:url('images/-titelbild.jpg') center/cover; color:white; padding:100px; text-align:center;">
-    <h1>Ferienwohnung Villalonga</h1>
-    <p>Porto Cristo · Mallorca · 3 Minuten zum Strand</p>
-</div>
-        <h1>Ferienwohnung Villalonga</h1>
-        <p>Porto Cristo · Mallorca · 3 Minuten zum Strand</p>
+      <!-- HEADER -->
+<div style="
+    background:url('images/titelbild.jpg') center/cover no-repeat;
+    height:80vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+">
+
+    <!-- dunkler Overlay für bessere Lesbarkeit -->
+    <div style="
+        position:absolute;
+        top:0; left:0; right:0; bottom:0;
+        background:rgba(0,0,0,0.4);
+    "></div>
+
+    <!-- Text -->
+    <div style="position:relative; z-index:2;">
+        <h1 style="margin:0; font-size:48px;">
+            Ferienwohnung Villalonga
+        </h1>
+        <p style="font-size:20px; margin-top:10px;">
+            Porto Cristo · Mallorca · 3 Minuten zum Strand
+        </p>
     </div>
+
+</div>
 
     <!-- ABOUT -->
     <div style="padding:40px; max-width:900px; margin:auto;">
