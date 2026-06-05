@@ -1,9 +1,7 @@
-# Porto-Cristo-Apartment-Villalonga
-Modern holiday apartment in Porto Cristo, Mallorca. 3 minutes from the beach, balcony, Wi-Fi, air conditioning, and accommodation for 2 guests.
 # Ferienwohnung Villalonga – Porto Cristo, Mallorca
 
-Modern holiday apartment in Porto Cristo, Mallorca.  
-3 minutes from the beach, balcony, Wi-Fi, air conditioning, and accommodation for 2 guests.
+Moderne Ferienwohnung in Porto Cristo, Mallorca.  
+3 Minuten vom Strand entfernt, Balkon, WLAN, Klimaanlage und Platz für 2 Gäste.
 
 ---
 
