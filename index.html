@@ -14,6 +14,53 @@ body{
     line-height:1.6;
 }
 
+/* ===== HERO ===== */
+.hero{
+    height:80vh;
+    background:url('images/-titelbild.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin:0;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* language */
+.lang a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.lang a:hover{
+    opacity:0.7;
+}
+
+/* ===== LAYOUT ===== */
 .container{
     max-width:1100px;
     margin:auto;
@@ -34,44 +81,7 @@ h2{
     margin-bottom:20px;
 }
 
-.hero{
-    height:80vh;
-    background:url('images/-titelbild.jpg') center/cover no-repeat;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.4);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    font-size:48px;
-    margin:0;
-}
-
-.hero p{
-    font-size:20px;
-}
-
-.lang a{
-    color:white;
-    margin:0 10px;
-    text-decoration:none;
-}
-
+/* ===== GRID ===== */
 .grid{
     display:grid;
     gap:20px;
@@ -82,9 +92,18 @@ h2{
 }
 
 .grid-3{
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 }
 
+/* images */
+.grid img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* highlights */
 .highlight{
     padding:20px;
     background:white;
@@ -92,6 +111,7 @@ h2{
     box-shadow:0 4px 15px rgba(0,0,0,0.05);
 }
 
+/* table */
 .table{
     width:100%;
     border-collapse:collapse;
@@ -106,22 +126,23 @@ h2{
     background:#f4f4f4;
 }
 
+/* badges */
 .badge{
-    display:inline-block;
-    padding:10px;
+    padding:12px;
     border-radius:10px;
-    margin:5px;
     font-size:14px;
+    text-align:center;
 }
 
 .free{background:#d4f7d4;}
 .partial{background:#ffe9b3;}
 .booked{background:#ffd6d6;}
 
+/* whatsapp */
 .whatsapp{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:25px;
+    right:25px;
     background:#25D366;
     color:white;
     padding:14px 18px;
@@ -129,8 +150,15 @@ h2{
     text-decoration:none;
     font-weight:bold;
     box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    z-index:9999;
+    transition:0.2s;
 }
 
+.whatsapp:hover{
+    transform:scale(1.05);
+}
+
+/* mobile */
 @media(max-width:768px){
     .hero h1{font-size:32px;}
     .hero p{font-size:16px;}
@@ -145,6 +173,7 @@ h2{
     <div class="hero-content">
         <h1>Ferienwohnung Villalonga</h1>
         <p>Porto Cristo · Mallorca · 3 Minuten zum Strand</p>
+
         <div class="lang">
             <a href="index.html">DE</a>
             <a href="en.html">EN</a>
@@ -153,24 +182,20 @@ h2{
     </div>
 </div>
 
-<!-- ABOUT -->
 <div class="container">
+
+<!-- ABOUT -->
 <div class="card">
 <h2>Herzlich Willkommen</h2>
-
-<p>in unserer liebevoll renovierten und stilvoll eingerichteten Ferienwohnung im schönen Porto Cristo.</p>
-
-<p>Diese helle, 69 m² große Wohnung bietet ein offenes Wohnkonzept mit viel Licht und Komfort.</p>
-
+<p>Liebevoll renovierte Ferienwohnung im Herzen von Porto Cristo.</p>
+<p>69 m² offenes Wohnkonzept mit viel Licht, ideal für 2 Personen.</p>
 <p>Offener Wohnbereich mit Küche, Essbereich und Lounge.</p>
-
-<p>Patio de Luz verbindet Wohn- und Schlafbereich mit natürlichem Licht.</p>
+<p>Patio de Luz verbindet Schlaf- und Wohnbereich mit natürlichem Licht.</p>
 </div>
 
 <!-- AUSSTATTUNG -->
 <div class="card">
 <h2>Ausstattung</h2>
-
 <div class="grid grid-2">
 <div>✔ Klimaanlage</div>
 <div>✔ WLAN</div>
@@ -184,9 +209,8 @@ h2{
 <!-- HIGHLIGHTS -->
 <div class="card">
 <h2>Highlights</h2>
-
 <div class="grid grid-3">
-<div class="highlight">🏖️ 3 Minuten zum Strand</div>
+<div class="highlight">🏖️ 3 Min zum Strand</div>
 <div class="highlight">📍 Zentrum Porto Cristo</div>
 <div class="highlight">🏡 Modern renoviert</div>
 <div class="highlight">🌴 Ideal für 2 Personen</div>
@@ -196,9 +220,8 @@ h2{
 <!-- PREISE -->
 <div class="card">
 <h2>Preise 2026</h2>
-
 <table class="table">
-<tr><th>Monat</th><th>Preis pro Nacht</th></tr>
+<tr><th>Monat</th><th>Preis</th></tr>
 <tr><td>Januar</td><td>110 €</td></tr>
 <tr><td>Februar</td><td>110 €</td></tr>
 <tr><td>März</td><td>120 €</td></tr>
@@ -217,25 +240,28 @@ h2{
 <!-- OFFER -->
 <div class="card" style="text-align:center;">
 <h2>🎉 Spezialangebot</h2>
-<p style="font-size:22px; font-weight:bold;">7 Nächte bleiben – nur 6 bezahlen</p>
+<p style="font-size:22px;font-weight:bold;">
+7 Nächte bleiben – nur 6 bezahlen
+</p>
 </div>
 
 <!-- LAGE -->
 <div class="card">
 <h2>📍 Lage & Umgebung</h2>
+<p>Nur wenige Minuten zu Strand, Hafen und Restaurants.</p>
 
-<p>Nur wenige Minuten zum Strand, Hafen und Restaurants.</p>
-
-<div class="grid grid-2" style="text-align:left;">
-<div>🏖️ Strand 3 Minuten</div>
+<div class="grid grid-2">
+<div>🏖️ Strand 3 Min</div>
 <div>⚓ Hafen Porto Cristo</div>
 <div>🕳️ Cuevas del Drach</div>
 <div>🎾 Rafa Nadal Academy</div>
 </div>
 
 <div style="margin-top:30px;">
-<iframe src="https://www.google.com/maps?q=Porto+Cristo+Mallorca&output=embed"
-width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
+<iframe 
+src="https://www.google.com/maps?q=Porto+Cristo+Mallorca&output=embed"
+width="100%" height="300" style="border:0;border-radius:10px;">
+</iframe>
 </div>
 </div>
 
@@ -244,7 +270,6 @@ width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
 <h2>📅 Verfügbarkeit</h2>
 
 <div class="grid grid-3">
-
 <div class="badge free">Januar<br><b>Frei</b></div>
 <div class="badge free">Februar<br><b>Frei</b></div>
 <div class="badge partial">März<br><b>Teilweise</b></div>
@@ -257,43 +282,19 @@ width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
 <div class="badge free">Oktober<br><b>Frei</b></div>
 <div class="badge partial">November<br><b>Teilweise</b></div>
 <div class="badge free">Dezember<br><b>Frei</b></div>
-
-</div>
-</div>
-
-<!-- BEWERTUNGEN -->
-<div class="card">
-<h2>⭐ Gästebewertungen</h2>
-
-<div class="grid grid-2">
-<div class="highlight">⭐⭐⭐⭐⭐<br>Perfekte Lage und super sauber.</div>
-<div class="highlight">⭐⭐⭐⭐⭐<br>Sehr stilvoll und ruhig.</div>
-</div>
-</div>
-
-<!-- WHY -->
-<div class="card">
-<h2>✨ Warum diese Wohnung?</h2>
-
-<div class="grid grid-2">
-<div>📍 Top Lage</div>
-<div>🏡 Stilvoll renoviert</div>
-<div>💻 WLAN & Komfort</div>
-<div>🌴 Perfekt für Paare</div>
 </div>
 </div>
 
 <!-- BILDER -->
 <div class="card">
 <h2>Bilder</h2>
-
 <div class="grid grid-3">
-<img src="images/-wohnen1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
-<img src="images/-kueche3.jpg" style="width:100%; border-radius:10px;" loading="lazy">
-<img src="images/-schlafen.jpg" style="width:100%; border-radius:10px;" loading="lazy">
-<img src="images/-bad1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
-<img src="images/-patio2.jpg" style="width:100%; border-radius:10px;" loading="lazy">
-<img src="images/-essen1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-wohnen1.jpg">
+<img src="images/-kueche3.jpg">
+<img src="images/-schlafen.jpg">
+<img src="images/-bad1.jpg">
+<img src="images/-patio2.jpg">
+<img src="images/-essen1.jpg">
 </div>
 </div>
 
@@ -308,7 +309,7 @@ width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
 
 <!-- WHATSAPP -->
 <a class="whatsapp"
-href="https://wa.me/4367763936640?text=Hallo%2C%20ich%20interessiere%20mich%20für%20die%20Ferienwohnung">
+href="https://wa.me/4367763936640?text=Hallo%20ich%20interessiere%20mich%20für%20die%20Ferienwohnung">
 📲 WhatsApp
 </a>
 
