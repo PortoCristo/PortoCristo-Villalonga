@@ -580,55 +580,112 @@ animation:pulse 2.5s infinite;
   100% { transform: scale(1); }
 }
 
-/* =========================
-   MOBILE FIX (FINAL CLEAN VERSION)
-   ========================= */
+/* GLOBAL CLEAN BASE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
 
+div[style*="max-width"] {
+    transition: all 0.2s ease;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.2px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* CARDS / GRID */
+div[style*="grid-template-columns"] > div {
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+div[style*="grid-template-columns"] > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* IMAGES */
+img {
+    display: block;
+    width: 100%;
+    border-radius: 12px !important;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* TABLES */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #222;
+    color: #fff;
+    font-weight: normal;
+}
+
+td {
+    background: #fff;
+}
+
+/* WHATSAPP */
+a[style*="25D366"] {
+    backdrop-filter: blur(6px);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
     body {
         padding: 0;
     }
 
-    /* Headline */
     h1 {
         font-size: 30px !important;
         line-height: 1.2 !important;
         padding: 0 10px;
     }
 
-    /* Text */
     p {
         font-size: 16px !important;
         line-height: 1.4;
     }
 
-    /* Section spacing (only real containers) */
     div[style*="max-width"] {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        margin-top: 25px !important;
-        margin-bottom: 25px !important;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
     }
 
-    /* Grids → 1 column */
     div[style*="grid-template-columns"] {
         grid-template-columns: 1fr !important;
+        gap: 12px !important;
     }
 
-    /* Grid cards */
     div[style*="grid-template-columns"] > div {
-        padding: 18px !important;
+        padding: 16px !important;
         border-radius: 12px;
     }
 
-    /* Images */
     img {
         border-radius: 10px !important;
         object-fit: cover;
     }
 
-    /* Tables */
     table {
         font-size: 13px !important;
         display: block;
@@ -637,6 +694,16 @@ animation:pulse 2.5s infinite;
 
     th, td {
         padding: 8px !important;
+    }
+
+    a[style*="25D366"] {
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+        border-radius: 40px !important;
+    }
+
+    a[style*="25D366"] span {
+        display: none;
     }
 }
 </style>
