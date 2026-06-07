@@ -4,177 +4,312 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ferienwohnung Porto Cristo</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#fafafa;
+    color:#222;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    margin-bottom:40px;
+}
+
+h2{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.hero{
+    height:80vh;
+    background:url('images/-titelbild.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:48px;
+    margin:0;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.lang a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+}
+
+.grid{
+    display:grid;
+    gap:20px;
+}
+
+.grid-2{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.grid-3{
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+
+.highlight{
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.table th, .table td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+.table th{
+    background:#f4f4f4;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px;
+    border-radius:10px;
+    margin:5px;
+    font-size:14px;
+}
+
+.free{background:#d4f7d4;}
+.partial{background:#ffe9b3;}
+.booked{background:#ffd6d6;}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+@media(max-width:768px){
+    .hero h1{font-size:32px;}
+    .hero p{font-size:16px;}
+}
+</style>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin:0; padding:0; background:#fafafa; color:#222; line-height:1.6;">
+<body>
 
 <!-- HERO -->
-<div class="hero" style="background:url('images/-titelbild.jpg') center/cover no-repeat; height:80vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white; position:relative;">
-
-<div style="position:absolute; inset:0; background:rgba(0,0,0,0.4);"></div>
-
-<div style="position:relative; z-index:2;">
-    <h1 style="margin:0; font-size:48px;">Ferienwohnung Villalonga</h1>
-    <p style="font-size:20px; margin-top:10px;">Porto Cristo · Mallorca · 3 Minuten zum Strand</p>
-
-    <div style="margin-top:15px;">
-        <a href="index.html" style="color:white; margin:0 10px;">DE</a>
-        <a href="en.html" style="color:white; margin:0 10px;">EN</a>
-        <a href="fr.html" style="color:white; margin:0 10px;">FR</a>
+<div class="hero">
+    <div class="hero-content">
+        <h1>Ferienwohnung Villalonga</h1>
+        <p>Porto Cristo · Mallorca · 3 Minuten zum Strand</p>
+        <div class="lang">
+            <a href="index.html">DE</a>
+            <a href="en.html">EN</a>
+            <a href="fr.html">FR</a>
+        </div>
     </div>
-</div>
 </div>
 
 <!-- ABOUT -->
-<div style="padding:60px 40px; max-width:1000px; margin:40px auto; background:white; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+<div class="container">
+<div class="card">
 <h2>Herzlich Willkommen</h2>
 
-<p style="font-size:17px; color:#444; max-width:800px; margin:0 auto 20px;">
-in unserer liebevoll renovierten und stilvoll eingerichteten Ferienwohnung im schönen Porto Cristo
-</p>
+<p>in unserer liebevoll renovierten und stilvoll eingerichteten Ferienwohnung im schönen Porto Cristo.</p>
 
-<p style="font-size:17px; color:#444; max-width:800px; margin:0 auto 20px;">
-Diese helle, 69 m² große Wohnung wurde ursprünglich aus zwei separaten Räumen zu einem großzügigen, offenen Wohnkonzept umgestaltet.
-</p>
+<p>Diese helle, 69 m² große Wohnung bietet ein offenes Wohnkonzept mit viel Licht und Komfort.</p>
 
-<p style="font-size:17px; color:#444; max-width:800px; margin:0 auto 20px;">
-Das Herzstück ist der offene Wohnbereich mit Küche, Essbereich und Lounge.
-</p>
+<p>Offener Wohnbereich mit Küche, Essbereich und Lounge.</p>
 
-<p style="font-size:17px; color:#444; max-width:800px; margin:0 auto;">
-Ein Patio de Luz bringt zusätzliches Licht in die Wohnung.
-</p>
+<p>Patio de Luz verbindet Wohn- und Schlafbereich mit natürlichem Licht.</p>
 </div>
 
 <!-- AUSSTATTUNG -->
-<div style="padding:60px 40px; background:#f7f7f7; text-align:center;">
+<div class="card">
 <h2>Ausstattung</h2>
-<p style="color:#666;">Alles, was du für einen komfortablen Aufenthalt brauchst</p>
 
-<div style="max-width:800px; margin:auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px; text-align:left;">
+<div class="grid grid-2">
 <div>✔ Klimaanlage</div>
-<div>✔ Kostenloses WLAN</div>
+<div>✔ WLAN</div>
 <div>✔ Voll ausgestattete Küche</div>
-<div>✔ Balkon mit Sitzecke</div>
-<div>✔ Strandtücher inklusive</div>
-<div>✔ Ruhige Wohnlage</div>
+<div>✔ Balkon</div>
+<div>✔ Strandtücher</div>
+<div>✔ Ruhige Lage</div>
 </div>
 </div>
 
 <!-- HIGHLIGHTS -->
-<div style="padding:60px 40px; max-width:1000px; margin:40px auto; background:white; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.06);">
-<h2 style="text-align:center;">Highlights</h2>
+<div class="card">
+<h2>Highlights</h2>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:30px;">
-
-<div style="padding:25px; background:white; border-radius:14px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
-<h3>🏖️ Strandnähe</h3><p>3 Minuten zu Fuß</p>
-</div>
-
-<div style="padding:25px; background:white; border-radius:14px; box-shadow:0 4px 15px rgba(0,0,0,0.05);">
-<h3>📍 Lage</h3><p>Porto Cristo Zentrum</p>
-</div>
-
+<div class="grid grid-3">
+<div class="highlight">🏖️ 3 Minuten zum Strand</div>
+<div class="highlight">📍 Zentrum Porto Cristo</div>
+<div class="highlight">🏡 Modern renoviert</div>
+<div class="highlight">🌴 Ideal für 2 Personen</div>
 </div>
 </div>
 
 <!-- PREISE -->
-<div style="padding:40px; max-width:900px; margin:auto;">
-<h2 style="text-align:center;">Preise 2026</h2>
+<div class="card">
+<h2>Preise 2026</h2>
 
-<table style="width:100%; border-collapse:collapse; margin-top:25px;">
-<tr style="background:#f4f4f4;">
-<th style="padding:12px; border:1px solid #ddd;">Monat</th>
-<th style="padding:12px; border:1px solid #ddd;">Preis</th>
-</tr>
-
-<tr><td style="padding:10px; border:1px solid #ddd;">Januar</td><td style="padding:10px; border:1px solid #ddd;">110 €</td></tr>
-<tr><td style="padding:10px; border:1px solid #ddd;">Februar</td><td style="padding:10px; border:1px solid #ddd;">110 €</td></tr>
-<tr><td style="padding:10px; border:1px solid #ddd;">März</td><td style="padding:10px; border:1px solid #ddd;">120 €</td></tr>
+<table class="table">
+<tr><th>Monat</th><th>Preis pro Nacht</th></tr>
+<tr><td>Januar</td><td>110 €</td></tr>
+<tr><td>Februar</td><td>110 €</td></tr>
+<tr><td>März</td><td>120 €</td></tr>
+<tr><td>April</td><td>140 €</td></tr>
+<tr><td>Mai</td><td>150 €</td></tr>
+<tr><td>Juni</td><td>170 €</td></tr>
+<tr><td>Juli</td><td>220 €</td></tr>
+<tr><td>August</td><td>230 €</td></tr>
+<tr><td>September</td><td>190 €</td></tr>
+<tr><td>Oktober</td><td>150 €</td></tr>
+<tr><td>November</td><td>120 €</td></tr>
+<tr><td>Dezember</td><td>130 €</td></tr>
 </table>
 </div>
 
 <!-- OFFER -->
-<div style="background:white; padding:60px; text-align:center; border-radius:16px; margin:40px auto; max-width:800px; box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+<div class="card" style="text-align:center;">
 <h2>🎉 Spezialangebot</h2>
-<p style="font-size:24px; font-weight:bold;">7 Nächte bleiben – nur 6 bezahlen</p>
+<p style="font-size:22px; font-weight:bold;">7 Nächte bleiben – nur 6 bezahlen</p>
 </div>
 
 <!-- LAGE -->
-<div style="padding:60px; max-width:1000px; margin:40px auto; background:white; border-radius:16px; text-align:center;">
+<div class="card">
 <h2>📍 Lage & Umgebung</h2>
 
-<p style="max-width:700px; margin:auto;">
-Nur 3 Minuten zum Strand, Hafen und Restaurants.
-</p>
+<p>Nur wenige Minuten zum Strand, Hafen und Restaurants.</p>
 
-<div style="text-align:left; max-width:700px; margin:30px auto; line-height:2;">
-<p>🏖️ Strand</p>
-<p>⚓ Hafen</p>
-<p>🕳️ Cuevas del Drach</p>
-<p>🎾 Rafa Nadal Academy</p>
+<div class="grid grid-2" style="text-align:left;">
+<div>🏖️ Strand 3 Minuten</div>
+<div>⚓ Hafen Porto Cristo</div>
+<div>🕳️ Cuevas del Drach</div>
+<div>🎾 Rafa Nadal Academy</div>
 </div>
 
-<div style="margin-top:40px;">
-<iframe src="https://www.google.com/maps?q=Porto+Cristo+Mallorca&output=embed" width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
+<div style="margin-top:30px;">
+<iframe src="https://www.google.com/maps?q=Porto+Cristo+Mallorca&output=embed"
+width="100%" height="300" style="border:0; border-radius:10px;"></iframe>
 </div>
 </div>
 
 <!-- VERFÜGBARKEIT -->
-<div style="padding:60px 40px; max-width:900px; margin:auto; text-align:center;">
+<div class="card">
 <h2>📅 Verfügbarkeit</h2>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin-top:30px;">
-<div style="padding:15px; background:#d4f7d4;">Januar<br><b>Frei</b></div>
-<div style="padding:15px; background:#ffd6d6;">April<br><b>Belegt</b></div>
+<div class="grid grid-3">
+
+<div class="badge free">Januar<br><b>Frei</b></div>
+<div class="badge free">Februar<br><b>Frei</b></div>
+<div class="badge partial">März<br><b>Teilweise</b></div>
+<div class="badge booked">April<br><b>Belegt</b></div>
+<div class="badge free">Mai<br><b>Frei</b></div>
+<div class="badge free">Juni<br><b>Frei</b></div>
+<div class="badge booked">Juli<br><b>Belegt</b></div>
+<div class="badge booked">August<br><b>Belegt</b></div>
+<div class="badge free">September<br><b>Frei</b></div>
+<div class="badge free">Oktober<br><b>Frei</b></div>
+<div class="badge partial">November<br><b>Teilweise</b></div>
+<div class="badge free">Dezember<br><b>Frei</b></div>
+
 </div>
 </div>
 
 <!-- BEWERTUNGEN -->
-<div style="padding:60px 40px; max-width:900px; margin:auto; text-align:center;">
+<div class="card">
 <h2>⭐ Gästebewertungen</h2>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:30px; text-align:left;">
-<div style="padding:20px; border:1px solid #eee;">
-⭐⭐⭐⭐⭐<br>
-"Perfekte Lage"
-</div>
+<div class="grid grid-2">
+<div class="highlight">⭐⭐⭐⭐⭐<br>Perfekte Lage und super sauber.</div>
+<div class="highlight">⭐⭐⭐⭐⭐<br>Sehr stilvoll und ruhig.</div>
 </div>
 </div>
 
 <!-- WHY -->
-<div style="background:#f8f8f8; padding:70px 40px; text-align:center;">
+<div class="card">
 <h2>✨ Warum diese Wohnung?</h2>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-top:40px;">
-<div><h3>📍 Lage</h3><p>Top</p></div>
-<div><h3>🏡 Stil</h3><p>Modern</p></div>
-<div><h3>💻 Komfort</h3><p>WLAN</p></div>
+<div class="grid grid-2">
+<div>📍 Top Lage</div>
+<div>🏡 Stilvoll renoviert</div>
+<div>💻 WLAN & Komfort</div>
+<div>🌴 Perfekt für Paare</div>
 </div>
 </div>
 
 <!-- BILDER -->
-<div style="padding:40px; max-width:1000px; margin:auto;">
-<h2 style="text-align:center;">Bilder</h2>
+<div class="card">
+<h2>Bilder</h2>
 
-<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:10px;">
-<img src="images/-wohnen1.jpg" loading="lazy" style="width:100%; border-radius:10px;">
-<img src="images/-kueche3.jpg" loading="lazy" style="width:100%; border-radius:10px;">
-<img src="images/-schlafen.jpg" loading="lazy" style="width:100%; border-radius:10px;">
+<div class="grid grid-3">
+<img src="images/-wohnen1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-kueche3.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-schlafen.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-bad1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-patio2.jpg" style="width:100%; border-radius:10px;" loading="lazy">
+<img src="images/-essen1.jpg" style="width:100%; border-radius:10px;" loading="lazy">
 </div>
 </div>
 
 <!-- CONTACT -->
-<div style="background:#1e1e1e; color:white; padding:40px; text-align:center;">
+<div class="card" style="text-align:center;">
 <h2>Kontakt</h2>
 <p>📲 WhatsApp bevorzugt</p>
-<p style="opacity:0.8; font-size:14px;">Email auf Anfrage</p>
+<p>Email auf Anfrage</p>
+</div>
+
 </div>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/4367763936640?text=Hallo"
-style="position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:14px 18px; border-radius:50px; text-decoration:none;">
-📲 WhatsApp <span style="font-size:12px;">Antwort meist &lt;1h</span>
+<a class="whatsapp"
+href="https://wa.me/4367763936640?text=Hallo%2C%20ich%20interessiere%20mich%20für%20die%20Ferienwohnung">
+📲 WhatsApp
 </a>
 
 </body>
