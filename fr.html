@@ -97,14 +97,14 @@
         Tout ce dont vous avez besoin pour un séjour confortable
     </p>
 
-    <div style="
-        max-width:800px;
-        margin:auto;
-        display:grid;
-        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-        gap:15px;
-        text-align:left;
-    ">
+    <div class="grid-cards" style="
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    text-align:left;
+">
 
         <div>✔ Climatisation</div>
         <div>✔ WiFi gratuit</div>
@@ -140,14 +140,14 @@
     letter-spacing:0.3px;
 ">Points forts</h2>
 
-    <div style="
-        max-width:800px;
-        margin:auto;
-        display:grid;
-        grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-        gap:20px;
-        margin-top:30px;
-    ">
+    <div class="grid-cards" style="
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    text-align:left;
+">
 
         <div style="background:white;padding:25px;border-radius:14px;box-shadow:0 4px 15px rgba(0,0,0,0.05);">
             <h3>🏖️ Proche de la plage</h3>
@@ -175,8 +175,6 @@
 
 <!-- PREISE -->
 <div style="padding:40px; max-width:900px; margin:auto;">
-
-<div style="padding:40px; max-width:800px; margin:auto;">
 
  <h2 style="
     text-align:center;
@@ -221,9 +219,11 @@ Veuillez noter : toutes les informations sont valables lors de la réservation.
 </div>
 
 </div>
-</div>
 
-<!-- OFFER -->
+<!-- OFFRE -->
+<h2 style="font-size:32px;margin-bottom:15px;">
+🎉 Offre spéciale
+</h2>
 <div style="
 background:white;
 padding:60px;
@@ -233,7 +233,6 @@ margin:40px auto;
 max-width:800px;
 box-shadow:0 10px 30px rgba(0,0,0,0.06);
 ">
-
 <h2 style="font-size:32px;margin-bottom:15px;">
 🎉 Offre spéciale
 </h2>
@@ -247,40 +246,7 @@ Offre exclusive de réservation directe pour certaines périodes.
 </p>
 </div>
 
-<!-- OFFRE -->
-<div style="
-background:white;
-padding:60px;
-text-align:center;
-border-radius:16px;
-margin:40px auto;
-max-width:800px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
-">
-
-<h2 style="
-font-size:32px;
-margin-bottom:15px;
-">
-🎉 Offre spéciale
-</h2>
-
-<p style="
-font-size:24px;
-font-weight:bold;
-margin-bottom:10px;
-">
-7 nuits réservées – 6 nuits payées seulement
-</p>
-
-<p style="
-color:#666;
-font-size:16px;
-">
-Offre exclusive de réservation directe pour certaines périodes.
-</p>
-
-<!-- EMPLACEMENT & ENVIRONS -->
+    <!-- EMPLACEMENT & ENVIRONS -->
 <div style="
     padding:60px;
     max-width:1000px;
@@ -472,14 +438,13 @@ Cet appartement a été spécialement conçu pour les couples qui recherchent <s
 Pas de foule d’hôtel, pas de tourisme de masse – mais une maison de qualité au cœur de Porto Cristo.
 </p>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-gap:20px;
-margin-top:40px;
-max-width:900px;
-margin-left:auto;
-margin-right:auto;
+<div class="grid-cards" style="
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:15px;
+    text-align:left;
 ">
 
 <div>
@@ -545,8 +510,88 @@ letter-spacing:0.3px;
 </div>
 
 </div>
-
+    
 <!-- WHATSAPP -->
+<a href="https://wa.me/4367763936640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20l'appartement%20à%20Porto%20Cristo"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:15px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+z-index:9999;
+display:flex;
+align-items:center;
+gap:8px;
+animation:pulse 2.5s infinite;
+">
+
+📲 WhatsApp
+<span style="font-size:12px;opacity:0.9;">Réponse sous 1h</span>
+
+</a>
+
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* GLOBAL CLEAN BASE */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
+
+div[style*="max-width"] {
+    transition: all 0.2s ease;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.2px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* CARDS / GRID */
+div[style*="grid-template-columns"] > div {
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+div[style*="grid-template-columns"] > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* IMAGES */
+img {
+    display: block;
+    width: 100%;
+    border-radius: 12px !important;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+<p>📲 WhatsApp préféré pour les demandes rapides</p>
+<p style="opacity:0.8;font-size:14px;">Email disponible sur demande</p>
+</div>
+
+</div>
+    
 <!-- WHATSAPP -->
 <a href="https://wa.me/4367763936640?text=Bonjour%2C%20je%20suis%20intéressé%20par%20l'appartement%20à%20Porto%20Cristo"
 style="
